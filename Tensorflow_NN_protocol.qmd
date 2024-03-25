@@ -54,6 +54,11 @@ Number of dense layers
 
 (Arin)
 Dropout (XX) - designed to prevent overfitting, randomly drop out a proportion of neurons 
+Dropout is a form of regularization that aims to reduce overfitting by preventing complex co-adaptations on training data. It works by randomly disabling a portion of the neurons in the network during training, forcing the data to flow through different pathways, and thus, enhancing generalization. The key parameter of dropout is the dropout rate. It defines the probability of any given unit being dropped or set to zero during training. Typical values are between 0.2 and 0.5. Choosing the right rate is crucial for the model's performance and generalization capability. Integrate dropout layers in the neural network model after the activation layers of fully connected (Dense) layers or before the output layer. 
+
+```python
+from tensorflow.keras.layers import Dropout
+model.add(Dropout(rate=0.5)) # dropout rate is 0.5
 
 
 
