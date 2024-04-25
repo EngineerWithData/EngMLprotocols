@@ -11,10 +11,18 @@ jupyter: python3
 
 # Introduction
 
-This document presents a protocol (e.g., set of guidelines) for building reliable predictive engineering models with sequential neural networks.   The protocol is specific to engineering because XXXX.
+This document presents a protocol (e.g., set of guidelines) for building reliable predictive engineering models using machine learning.   The machine learning protocol is specific to engineering models because numbers go into the model, like dimensions or material properties, and numbers come out of the models, for example load-deformation response or ultimate strength.  The models are constructed using supervised learning and multivariate regression to define the input-output mapping.
  
 # Data model description
  
+The specific machine learning model we are using is called a sequential deep neural network.  The predictive model is constructed with a layer of networks, and the input data is processed 'sequentially' by passing through the first network layer, then the second layer, until reaching the final output layer.  (See udl Section 11.1)   Each network layer defines a multivariate, multilinear equation and these equations can be thought of as nested, results = f4(f3(f2(f1))).   In 3 dimensions, the equation looks like a surface.   The multi-variate equation in each layer has activation functions.
+
+Comment on width of network layer, smoothness of function
+
+Comment on number of network layers
+
+
+
 
 Tensorflow.keras.models  import Sequential 
 
